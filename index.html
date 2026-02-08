@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ish ❤️ Forever</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe6ea, #fff0f5);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.teddy {
+  font-size: 6rem;
+  animation: float 3s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.name {
+  font-size: 2.8rem;
+  color: #ff4d6d;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #d6336c;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.heart {
+  font-size: 2.5rem;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.buttons {
+  position: relative;
+  width: 320px;
+  height: 140px;
+}
+
+button {
+  width: 140px;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: white;
+}
+
+#noBtn {
+  background: #ced4da;
+  position: absolute;
+  left: 90px;
+  top: 70px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="mainPage">
+  <div class="teddy">🧸</div>
+  <div class="name">Ish ❤️</div>
+  <h1>Will you be mine forever?</h1>
+  <div class="subtitle">
+    Every smile. Every moment.  
+    Every forever 💕
+  </div>
+  <div class="heart">❤️</div>
+
+  <div class="buttons">
+    <button id="yesBtn">YES 💕</button>
+    <button id="noBtn">NO 🙄</button>
+  </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+
+const messages = [
+  "Wait… NO? 😳",
+  "Ish, think again 😏",
+  "That button is lying 🙄",
+  "The teddy is sad 🧸💔",
+  "No escape now 😈"
+];
+
+let count = 0;
+
+noBtn.addEventListener("click", function () {
+  if (count < messages.length) {
+    alert(messages[count]);
+    count++;
+  } else {
+    noBtn.style.left = Math.random() * 180 + "px";
+    noBtn.style.top = Math.random() * 100 + "px";
+  }
+});
+
+yesBtn.addEventListener("click", function () {
+  document.body.innerHTML =
+    "<h1 style='color:#ff4d6d;text-align:center;margin-top:40vh;'>🎆 She said YES 🎆<br><br>Ish, forever starts now ❤️</h1>";
+});
+</script>
+
+</body>
+</html>
