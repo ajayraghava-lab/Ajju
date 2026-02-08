@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ish ❤️ Forever</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe6ea, #fff0f5);
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .teddy {
+    font-size: 6rem; /* BIGGER TEDDY */
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .name {
+    font-size: 2.8rem;
+    color: #ff4d6d;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    color: #d6336c;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+    max-width: 320px;
+  }
+
+  .heart {
+    font-size: 2.5rem;
+    animation: pulse 1.2s infinite;
+    margin-bottom: 25px;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+  }
+
+  .buttons {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 150px;
+  }
+
+  button {
+    width: 145px;
+    padding: 14px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  #yesBtn {
+    background: #f
